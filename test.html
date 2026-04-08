@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>
+    Processing Foundation &mdash; Kitchen Sink </title>
+
+
+  <meta name="description"
+    content="When Processing was first initiated in 2001, the convergence of software and the arts was not as well-developed as it is today. Over the years, Processing has reached and empowered not…" />
+  <meta name="twitter:card"
+    value="When Processing was first initiated in 2001, the convergence of software and the arts was not as well-developed as it is today. Over the years, Processing has reached and empowered not…" />
+  <meta property="og:title" content="Kitchen Sink" />
+  <meta property="og:url"
+    content="https://processingfoundation.org/kitchen-sink" />
+  <meta property="og:description"
+    content="When Processing was first initiated in 2001, the convergence of software and the arts was not as well-developed as it is today. Over the years, Processing has reached and empowered not…" />
+  <meta property="og:image"
+    content="https://processingfoundation.org/content/12-kitchen-sink/all-streets.jpg" />
+
+  <link rel="shortcut icon"
+    href="https://processingfoundation.org/content/favicon.png" />
+
+  <link rel="stylesheet"
+    href="https://processingfoundation.org/assets/bundle.css?v=1716247063">
+  <script src="https://kit.fontawesome.com/9ddd71ce36.js"></script>
+  <!-- <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://js.stripe.com/v3/"></script> -->
+</head>
+
+<body class="default-template">
+
+  <a class="skip-to-main-content" href="#main-content">Skip to main content</a>
+
+  <header class="main-header main-header--desktop" aria-label="Header">
+    <nav class="main-header__main-navigation serif a-grey" role="navigation"
+      aria-label="Main Navigation">
+      <ul>
+        <li><a href="https://processingfoundation.org" title="Home"><svg
+              id="logo" x="0px" y="0px" viewBox="0 0 670 670"
+              style="enable-background:new 0 0 670 670;" aria-hidden="true">
+              <title>Processing Foundation Logo</title>
+              <style type="text/css">
+                .logo-st0 {
+                  fill: #9C4BFF;
+                }
+
+                .logo-st1 {
+                  fill: #5501A4;
+                }
+
+                .logo-st2 {
+                  fill: #D4B2FE;
+                }
+              </style>
+              <g>
+                <path class="logo-st0"
+                  d="M654.4,524.4h-150c0-48.7-9-85.1-28.4-114.6c-17.5-26.6-42.7-46.6-69.5-67.8c-37.5-29.7-80.1-63.3-104.2-118.8
+      c-13.2-30.3-19.3-64.4-18.1-101.2c1.1-36.3,9-76,24.1-121.3l142.3,47.4c-17.5,52.5-21.1,91.4-10.7,115.4
+      c9.1,20.9,31.4,38.6,59.6,60.9c31.7,25,71.1,56.2,101.9,103.1C637.1,381.8,654.4,446.2,654.4,524.4z" />
+                <path class="logo-st1"
+                  d="M154.4,624.4H4.4C4.4,569,14.4,520,34,478.6c18.5-39,46.1-72.3,81.9-98.9c60.2-44.8,133-64.1,203.4-82.7
+      c65.9-17.5,128.2-34,162.4-67.8c12.8-12.7,51.9-51.5,24.2-190.1L652.9,9.6c29.3,146.5,7.8,253.2-65.7,326
+      c-62.6,62.1-147.5,84.6-229.6,106.3c-59.3,15.7-115.3,30.5-152.4,58.1C181.6,517.7,154.4,547.7,154.4,624.4z" />
+                <rect class="logo-st2" x="154.4" y="174.4"
+                  transform="matrix(0.8 -0.6 0.6 0.8 -208.7346 222.5133)"
+                  width="150" height="500" />
+              </g>
+            </svg>
+            <span class="sr-only">processingfoundation.org</span></a></li>
+        <li><a href="/projects" title="Projects" class="">Projects</a></li>
+        <li><a href="/advocacy" title="Advocacy" class="">Advocacy</a></li>
+        <li><a href="/education" title="Education" class="">Education</a></li>
+        <li><a href="/fellowships" title="Fellowships" class="">Fellowships</a>
+        </li>
+        <li><a href="/grants" title="Grants" class="">Grants</a></li>
+        <li><a href="/people" title="People" class="">People</a></li>
+        <li><a href="/donate" title="Donate" class="">Donate</a></li>
+      </ul>
+    </nav>
+    <nav class="main-header__social-navigation a-grey" role="navigation"
+      aria-label="Social Navigation">
+      <ul>
+        <li><a href="https://www.instagram.com/processingorg/"
+            title="Instagram">
+            <span class="fab fa-instagram" title="Instagram"></span>
+          </a></li>
+        <li><a href="https://twitter.com/processingOrg" title="Twitter">
+            <span class="fab fa-twitter" title="Twitter"></span>
+          </a></li>
+        <!-- <li><a href="https://www.youtube.com/channel/UCeyJbY9g9spG7u8kfs2WrwQ"
+            title="YouTube">
+            <span class="fab fa-youtube" title="YouTube"></span>
+          </a></li> -->
+        <li><a href="https://vimeo.com/processingfoundation" title="Vimeo">
+            <span class="fab fa-vimeo-v" title="Vimeo"></span>
+          </a></li>
+        <li><a href="https://medium.com/processing-foundation" title="Medium">
+            <span class="fab fa-medium-m" title="Medium"></span>
+          </a></li>
+      </ul>
+    </nav>
+  </header>
+  <header class="main-header main-header--mobile" aria-label="Header"
+    aria-hidden="true">
+    <a href="https://processingfoundation.org" title="Home"><svg id="logo"
+        x="0px" y="0px" viewBox="0 0 670 670"
+        style="enable-background:new 0 0 670 670;" aria-hidden="true">
+        <title>Processing Foundation Logo</title>
+        <style type="text/css">
+          .logo-st0 {
+            fill: #9C4BFF;
+          }
+
+          .logo-st1 {
+            fill: #5501A4;
+          }
+
+          .logo-st2 {
+            fill: #D4B2FE;
+          }
+        </style>
+        <g>
+          <path class="logo-st0"
+            d="M654.4,524.4h-150c0-48.7-9-85.1-28.4-114.6c-17.5-26.6-42.7-46.6-69.5-67.8c-37.5-29.7-80.1-63.3-104.2-118.8
+      c-13.2-30.3-19.3-64.4-18.1-101.2c1.1-36.3,9-76,24.1-121.3l142.3,47.4c-17.5,52.5-21.1,91.4-10.7,115.4
+      c9.1,20.9,31.4,38.6,59.6,60.9c31.7,25,71.1,56.2,101.9,103.1C637.1,381.8,654.4,446.2,654.4,524.4z" />
+          <path class="logo-st1"
+            d="M154.4,624.4H4.4C4.4,569,14.4,520,34,478.6c18.5-39,46.1-72.3,81.9-98.9c60.2-44.8,133-64.1,203.4-82.7
+      c65.9-17.5,128.2-34,162.4-67.8c12.8-12.7,51.9-51.5,24.2-190.1L652.9,9.6c29.3,146.5,7.8,253.2-65.7,326
+      c-62.6,62.1-147.5,84.6-229.6,106.3c-59.3,15.7-115.3,30.5-152.4,58.1C181.6,517.7,154.4,547.7,154.4,624.4z" />
+          <rect class="logo-st2" x="154.4" y="174.4"
+            transform="matrix(0.8 -0.6 0.6 0.8 -208.7346 222.5133)" width="150"
+            height="500" />
+        </g>
+      </svg>
+      <span class="sr-only">processingfoundation.org</span></a>
+
+    <details>
+      <summary aria-label="Toggle Mobile Navigation">
+        <svg class="icon--menu-open" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 30 30">
+          <defs>
+            <style>
+              .a {
+                fill: none;
+                stroke: #333;
+                stroke-miterlimit: 10;
+                stroke-width: 2px;
+              }
+            </style>
+          </defs>
+          <title>menu-open</title>
+          <line class="a" y1="1" x2="30" y2="1" />
+          <line class="a" y1="29" x2="30" y2="29" />
+          <line class="a" y1="15" x2="30" y2="15" />
+        </svg> <svg class="icon--menu-close" version="1.1" id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;"
+          xml:space="preserve">
+          <style type="text/css">
+            .st0 {
+              fill: none;
+              stroke: #333;
+              stroke-width: 2;
+              stroke-miterlimit: 10;
+            }
+          </style>
+          <title>menu-close</title>
+          <line class="st0" x1="0.8" y1="29.2" x2="29.2" y2="0.8" />
+          <line class="st0" x1="29.2" y1="29.2" x2="0.8" y2="0.8" />
+        </svg>
+      </summary>
+
+      <nav class="main-header__main-navigation serif a-grey" role="navigation"
+        aria-label="Main Navigation">
+        <ul>
+          <li><a href="/projects" title="Projects" class="">Projects</a></li>
+          <li><a href="/advocacy" title="Advocacy" class="">Advocacy</a></li>
+          <li><a href="/education" title="Education" class="">Education</a></li>
+          <li><a href="/fellowships" title="Fellowships"
+              class="">Fellowships</a></li>
+          <li><a href="/grants" title="Grants" class="">Grants</a></li>
+          <li><a href="/people" title="People" class="">People</a></li>
+          <li><a href="/donate" title="Donate" class="">Donate</a></li>
+        </ul>
+      </nav>
+      <nav class="main-header__social-navigation a-grey" role="navigation"
+        aria-label="Social Navigation">
+        <ul>
+          <li><a href="https://www.instagram.com/processingorg/"
+              title="Instagram">
+              <span class="fab fa-instagram" title="Instagram"></span>
+            </a></li>
+          <li><a href="https://twitter.com/processingOrg" title="Twitter">
+              <span class="fab fa-twitter" title="Twitter"></span>
+            </a></li>
+          <li><a href="https://www.youtube.com/channel/UCeyJbY9g9spG7u8kfs2WrwQ"
+              title="YouTube">
+              <span class="fab fa-youtube" title="YouTube"></span>
+            </a></li>
+          <li><a href="https://vimeo.com/processingfoundation" title="Vimeo">
+              <span class="fab fa-vimeo-v" title="Vimeo"></span>
+            </a></li>
+          <li><a href="https://medium.com/processing-foundation" title="Medium">
+              <span class="fab fa-medium-m" title="Medium"></span>
+            </a></li>
+        </ul>
+      </nav>
+    </details>
+
+  </header>
+  <main id="main-content" aria-label="Content">
+    <h1>Kitchen Sink</h1>
+    <section class="box_large box_large--image section-box_large">
+      <div>
+        <div class="box_large__content">
+          <div class="box_large__title a-underline">
+            Box Large </div>
+          <div class="box_large__excerpt owl a-underline">
+            <p>If you are interested in receiving updates about Processing,
+              contributing to the repository, or downloading the software, visit
+              the Processing website.</p>
+            <p><a href="http://processing.org/" class="button">Learn More</a>
+            </p>
+          </div>
+        </div>
+        <figure><img
+            src="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg"
+            alt="all-streets-800x534-q85"
+            srcset="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 1x, https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 2x, https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 3x"
+            height="534">
+          <figcaption><em>All Streets</em> by Fathom Information Design
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <hr />
+    <section class="box_small section-box_small">
+      <div>
+        <div class="box_small__title a-underline">
+          Box Small </div>
+        <div class="box_small__excerpt owl a-underline">
+          <p>If you are interested in receiving updates about Processing,
+            contributing to the repository, or downloading the software, visit
+            the <a href="#">Processing</a> website.</p>
+          <p><a href="http://processing.org/" class="button">Learn More</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="section-text owl-em a-underline copy section-text--normal">
+      <p>When Processing was first initiated in 2001, the convergence of
+        software and the arts was not as well-developed as it is today. Over the
+        years, Processing has reached and empowered not only artists and coders,
+        but also designers, filmmakers, educators, musicians, performers, and
+        students of all kinds. Its community is now flourishing around the
+        world, from university classrooms to hackerspaces. The Processing
+        Foundation’s goal is to ensure that this access continues. As the 21st
+        century continues to see new technologies shape culture, the Foundation
+        takes a leading role in providing the tools for people to build such
+        technologies and nurturing the communities around them, by supporting
+        the following projects.</p>
+    </section>
+    <section class="box_large section-box_large">
+      <div>
+        <div class="box_large__content">
+          <div class="box_large__title a-underline">
+            <h2>Subpage A</h2>
+          </div>
+          <div class="box_large__excerpt owl a-underline">
+            <p>If you are interested in receiving updates about Processing,
+              contributing to the repository, or downloading the software, visit
+              the Processing website.</p>
+            <p><a href="https://processingfoundation.org/kitchen-sink/subpage-a"
+                class="button" title="Subpage A">View Initiative</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="box_large box_large--image section-box_large">
+      <div>
+        <div class="box_large__content">
+          <div class="box_large__title a-underline">
+            <h2>Subpage B</h2>
+          </div>
+          <div class="box_large__excerpt owl a-underline">
+            <p>The inaugural p5.js Contributors Conference gathered a diverse
+              group of approximately 30 participants at the Frank-Ratchye STUDIO
+              for Creative Inquiry in May 2015. For a week, the participants
+              advanced the code, documentation, and community outreach tools of
+              the p5.js programming environment.</p>
+            <p><a href="https://processingfoundation.org/kitchen-sink/subpage-b"
+                class="button" title="Subpage B">View Initiative</a></p>
+          </div>
+        </div>
+        <figure><img
+            src="https://processingfoundation.org/thumbs/kitchen-sink/subpage-b/day1-800x533-q85.jpg"
+            alt="And I'd like some alt text"
+            srcset="https://processingfoundation.org/thumbs/kitchen-sink/subpage-b/day1-800x533-q85.jpg 1x, https://processingfoundation.org/thumbs/kitchen-sink/subpage-b/day1-1600x1066-q85.jpg 2x, https://processingfoundation.org/thumbs/kitchen-sink/subpage-b/day1-2000x1333-q85.jpg 3x"
+            height="533">
+          <figcaption>Here's the caption</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="box_large section-box_large">
+      <div>
+        <div class="box_large__content">
+          <div class="box_large__title a-underline">
+            <h2>Subpage C</h2>
+          </div>
+          <div class="box_large__excerpt owl a-underline">
+            <p>By facilitating dialogue and collaboration, the Foundation
+              sponsors and hosts events that aim to broaden the audience for our
+              software projects, welcome those new to the community, and nurture
+              the specific needs of different groups.</p>
+            <p><a href="https://processingfoundation.org/kitchen-sink/subpage-c"
+                class="button" title="Subpage C">Learn More</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-block_large">
+      <div class="section-block_large__title a-underline">
+        <h2><a href="http://processing.org/">Processing</a> (Java)</h2>
+      </div>
+
+
+      <div class="section-block_large__content owl-em a-underline copy">
+        <p>Initially created to serve as a software sketchbook and to teach
+          programming fundamentals within a visual context, Processing has
+          evolved into a new medium for professionals and students alike. The
+          Processing software is free and open source, and runs on the Mac,
+          Windows, and GNU/Linux platforms. Processing has since evolved into a
+          development tool for professionals, an educational tool used in
+          classrooms around the country, and a new context and medium for
+          artists. Today, there are tens of thousands of students, artists,
+          designers, researchers, and hobbyists who use Processing for learning,
+          prototyping, and production.</p>
+      </div>
+
+      <div class="section-block_large__box owl-em a-underline">
+        <p>If you are interested in receiving updates about Processing,
+          contributing to the repository, or downloading the software, visit the
+          Processing website.</p>
+        <p><a href="http://processing.org/" class="button">Learn More</a></p>
+      </div>
+    </section>
+    <section class="section-heading a-underline section-heading--border">
+      <p>Board of Directors</p>
+    </section>
+    <section class="section-block_small">
+      <div class="section-block_small__content owl-em a-underline copy">
+        <p><a href="http://fathom.info/">Ben Fry</a> is principal of Fathom, a
+          design and software consultancy located in Boston. He received his
+          doctoral degree from the Aesthetics + Computation Group at the MIT
+          Media Laboratory, where his research focused on combining fields such
+          as computer science, statistics, graphic design, and data
+          visualization as a means for understanding information. After
+          completing his thesis, he spent time developing tools for
+          visualization of genetic data as a postdoc with Eric Lander at the Eli
+          and Edythe L. Broad Institute of MIT and Harvard. During the 2006–2007
+          school year, Ben was the Nierenberg Chair of Design for the Carnegie
+          Mellon School of Design. In 2011, he won the National Design Award for
+          Interaction Design from the Cooper-Hewitt. With Casey Reas, Fry
+          initiated Processing in 2001.</p>
+      </div>
+
+      <div class="section-block_small__image">
+        <figure><img
+            src="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg"
+            alt="all-streets-800x534-q85"
+            srcset="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 1x, https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 2x, https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 3x"
+            height="534">
+          <figcaption><em>All Streets</em> by Fathom Information Design
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section-gallery section-gallery--columns"
+      data-component="gallery">
+
+
+      <figure>
+        <img
+          src="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-500x334-q95.jpg"
+          data-zoom-src="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q95.jpg"
+          alt="">
+        <figcaption><em>All Streets</em> by Fathom Information Design
+        </figcaption>
+      </figure>
+
+
+      <figure>
+        <img
+          src="https://processingfoundation.org/thumbs/kitchen-sink/pettingzoo_barbican_04-500x334-q95.jpg"
+          data-zoom-src="https://processingfoundation.org/thumbs/kitchen-sink/pettingzoo_barbican_04-2000x1335-q95.jpg"
+          alt="">
+        <figcaption><em>Petting Zoo</em>, by experimental architecture and
+          design studio <a href="http://minimaforms.com/">Minimaforms</a>, is a
+          speculative robotic environment, where “artificial intelligent
+          creatures have been designed with the capacity to learn and explore
+          behaviors through interaction with participants.” The immersive
+          installation’s data scanning is done with Processing.</figcaption>
+      </figure>
+
+
+      <figure>
+        <img
+          src="https://processingfoundation.org/thumbs/kitchen-sink/screen-shot-2015-10-22-at-6.47.58-pm-500x281-q95.jpg"
+          data-zoom-src="https://processingfoundation.org/thumbs/kitchen-sink/screen-shot-2015-10-22-at-6.47.58-pm-1440x808-q95.jpg"
+          alt="">
+        <figcaption><em>Avena Test Bed</em>, by <a
+            href="http://benedikt-gross.de/log/">Benedikt Groß</a>, uses the
+          idea of “Agricultural Printing,” applying algorithms and custom
+          software made with Processing “to partition and to create an
+          environmentally beneficial structure into a standard biomass/energy
+          production field.” The project won the Fishburn prize for Design
+          Interactions at the Royal College of Art’s (RCA) annual graduate show.
+        </figcaption>
+      </figure>
+
+
+      <figure>
+        <img
+          src="https://processingfoundation.org/thumbs/kitchen-sink/screen-shot-2015-10-22-at-6.41.12-pm-500x280-q95.jpg"
+          data-zoom-src="https://processingfoundation.org/thumbs/kitchen-sink/screen-shot-2015-10-22-at-6.41.12-pm-1440x806-q95.jpg"
+          alt="">
+        <figcaption><em>Soundmachines</em> by <a
+            href="https://vimeo.com/35014340">The Product</a> is an instrument
+          for composing and performing electronic music through a visual and
+          responsive physical interface that uses Processing and Arduino.
+        </figcaption>
+      </figure>
+
+
+      <figure>
+        <img
+          src="https://processingfoundation.org/thumbs/kitchen-sink/day1-500x333-q95.jpg"
+          data-zoom-src="https://processingfoundation.org/thumbs/kitchen-sink/day1-2000x1333-q95.jpg"
+          alt="">
+        <figcaption>Processing Community Day 2017 held at the MIT Media Lab.
+        </figcaption>
+      </figure>
+
+
+      <figure>
+        <img
+          src="https://processingfoundation.org/thumbs/kitchen-sink/screen-shot-2016-07-29-at-6.32.43-pm-500x334-q95.png"
+          data-zoom-src="https://processingfoundation.org/thumbs/kitchen-sink/screen-shot-2016-07-29-at-6.32.43-pm-770x515-q95.png"
+          alt="">
+        <figcaption>The 5th <a
+            href="https://processingfoundation.org/advocacy/ucla-choreographic-coding-lab-2015">Choreographic
+            Coding Lab</a> was held September 15–19, 2015, co-hosted by the
+          Center for the Art of Performance (CAP UCLA) in partnership with
+          Design Media Arts (DMA), at UCLA. Funded in part by the Processing
+          Foundation.</figcaption>
+      </figure>
+
+
+      <figure>
+        <img
+          src="https://processingfoundation.org/thumbs/kitchen-sink/ssbkyh_portrait_oldboy-500x500-q95.jpg"
+          data-zoom-src="https://processingfoundation.org/thumbs/kitchen-sink/ssbkyh_portrait_oldboy-1000x1000-q95.jpg"
+          alt="">
+        <figcaption><em>Portrait</em> by <a
+            href="http://ssbkyh.com/index.html">Shinseungback Kimyonghun</a>
+          creates a series of portraits from movies, using custom software made
+          with processing. The software detects faces in every 24 frames of a
+          film, then composites an average face of all the found faces.
+        </figcaption>
+      </figure>
+    </section>
+    <section class="box_small section-box_small">
+      <div>
+        <div class="box_small__title a-underline">
+          <h2>Subpage A</h2>
+        </div>
+        <div class="box_small__excerpt owl a-underline">
+          <p>If you are interested in receiving updates about Processing,
+            contributing to the repository, or downloading the software, visit
+            the Processing website.</p>
+          <p><a href="https://processingfoundation.org/kitchen-sink/subpage-a"
+              class="button" title="Subpage A">View Initiative</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="box_small section-box_small">
+      <div>
+        <div class="box_small__title a-underline">
+          <h2>Subpage B</h2>
+        </div>
+        <div class="box_small__excerpt owl a-underline">
+          <p>The inaugural p5.js Contributors Conference gathered a diverse
+            group of approximately 30 participants at the Frank-Ratchye STUDIO
+            for Creative Inquiry in May 2015. For a week, the participants
+            advanced the code, documentation, and community outreach tools of
+            the p5.js programming environment.</p>
+          <p><a href="https://processingfoundation.org/kitchen-sink/subpage-b"
+              class="button" title="Subpage B">View Initiative</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="box_small section-box_small">
+      <div>
+        <div class="box_small__title a-underline">
+          <h2>Subpage C</h2>
+        </div>
+        <div class="box_small__excerpt owl a-underline">
+          <p>By facilitating dialogue and collaboration, the Foundation sponsors
+            and hosts events that aim to broaden the audience for our software
+            projects, welcome those new to the community, and nurture the
+            specific needs of different groups.</p>
+          <p><a href="https://processingfoundation.org/kitchen-sink/subpage-c"
+              class="button" title="Subpage C">Learn More</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="section-slideshow">
+      <div data-component="slideshow">
+
+        <figure>
+          <div class="section-slideshow__image-wrap object-fit--cover">
+            <img
+              src="https://processingfoundation.org/thumbs/kitchen-sink/day1-1500x1000-q95.jpg"
+              alt="">
+          </div>
+          <figcaption>Processing Community Day 2017 held at the MIT Media Lab.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <div class="section-slideshow__image-wrap object-fit--cover">
+            <img
+              src="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q95.jpg"
+              alt="">
+          </div>
+          <figcaption><em>All Streets</em> by Fathom Information Design
+          </figcaption>
+        </figure>
+
+        <figure>
+          <div class="section-slideshow__image-wrap object-fit--cover">
+            <img
+              src="https://processingfoundation.org/thumbs/kitchen-sink/pettingzoo_barbican_04-1500x1001-q95.jpg"
+              alt="">
+          </div>
+          <figcaption><em>Petting Zoo</em>, by experimental architecture and
+            design studio <a href="http://minimaforms.com/">Minimaforms</a>, is
+            a speculative robotic environment, where “artificial intelligent
+            creatures have been designed with the capacity to learn and explore
+            behaviors through interaction with participants.” The immersive
+            installation’s data scanning is done with Processing.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section-block_large">
+      <div class="section-block_large__title a-underline">
+        <h2>Block Large</h2>
+      </div>
+
+      <div class="section-block_large__image">
+        <figure><img
+            src="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg"
+            alt="all-streets-800x534-q85"
+            srcset="https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 1x, https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 2x, https://processingfoundation.org/thumbs/kitchen-sink/all-streets-800x534-q85.jpg 3x"
+            height="534">
+          <figcaption><em>All Streets</em> by Fathom Information Design
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="section-block_large__content owl-em a-underline copy">
+        <p><a href="http://stalgiagrigg.name/">Stalgia Grigg</a> is an artist
+          and activist based in LA. He builds generative systems in an attempt
+          to understand how revolutionary impulses move through culture. He
+          first learned to code with Processing and has maintained an investment
+          in the foundation ever since. Stalgia holds a BSVA from Purchase
+          College and a MFA from UCLA Design Media Arts. Stalgia will be
+          mentored by Lauren McCarthy.</p>
+      </div>
+
+      <div class="section-block_large__box owl-em a-underline">
+        <p>Evelyn Masso and Stalgia Grigg will be working alongside the larger
+          community of open source contributors to realize a 1.0 release of
+          p5.js. Stalgia will kick off the fellowship with a focus on WebGL
+          stability improvements, expanding developer documentation, and
+          creating new channels of communication for contributors. Processing
+          Foundation p5.js Fellows are supported in part by a grant from the
+          Mozilla Open Source Support program.</p>
+      </div>
+    </section>
+    <section class="section-embed">
+      <figure>
+        <div style="padding-top:56.25%;" class="is-fluid">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/Wimkqo8gDZ0" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    <section class="section-embed">
+      <figure>
+        <div style="padding-top:56.25%;" class="is-fluid">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.751459756379!2d-118.44318558478435!3d34.075884980599554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc8a16ea4f7d%3A0x34060848c5252534!2sBroad%20Art%20Center%2C%20240%20Charles%20E%20Young%20Dr%20N%2C%20Los%20Angeles%2C%20CA%2090095!5e0!3m2!1sen!2sus!4v1569574101247!5m2!1sen!2sus"
+            width="600" height="450" frameborder="0" style="border:0;"
+            allowfullscreen=""></iframe>
+        </div>
+      </figure>
+    </section>
+    <section class="section-heading a-underline section-heading--border">
+      <p>Organizing Team</p>
+    </section>
+    <hr />
+    <section class="section-grid_item a-underline ">
+      <div class="section-grid_item__image">
+        <figure><img
+            src="https://processingfoundation.org/thumbs/kitchen-sink/johanna1-800x1066-q85.jpg"
+            alt="johanna1-800x1066-q85"
+            srcset="https://processingfoundation.org/thumbs/kitchen-sink/johanna1-800x1066-q85.jpg 1x, https://processingfoundation.org/thumbs/kitchen-sink/johanna1-1000x1333-q85.jpg 2x, https://processingfoundation.org/thumbs/kitchen-sink/johanna1-1000x1333-q85.jpg 3x"
+            height="1066"></figure>
+      </div>
+      <div class="section-grid_item__content owl-em">
+        <h2>Johanna Hedva</h2>
+        <p>Organizer for Accessibility, Disability, and Care</p>
+        <p><a href="https://johannahedva.com/">Johanna Hedva</a> is the author
+          of the novel On Hell (Sator Press, 2018). Their fiction, essays, and
+          poems have appeared in Triple Canopy, Black Warrior Review, Entropy,
+          Mask Magazine, 3:AM, The White Review, and elsewhere. Their work has
+          been shown at Machine Project, Human Resources LA, the LA Architecture
+          and Design Museum, and the Museum of Contemporary Art on the Moon.
+          Their ongoing project on ableism, disability justice, and the politics
+          of care, This Earth, Our Hospital, includes the essays &quot;Sick
+          Woman Theory&quot; and &quot;Letter to a Young Doctor.&quot;</p>
+      </div>
+    </section>
+    <section class="section-grid_item a-underline ">
+      <div class="section-grid_item__image">
+        <figure><img
+            src="https://processingfoundation.org/thumbs/kitchen-sink/xin-500x680-q85.jpg"
+            alt="xin-500x680-q85"
+            srcset="https://processingfoundation.org/thumbs/kitchen-sink/xin-500x680-q85.jpg 1x, https://processingfoundation.org/thumbs/kitchen-sink/xin-500x680-q85.jpg 2x, https://processingfoundation.org/thumbs/kitchen-sink/xin-500x680-q85.jpg 3x"
+            height="680"></figure>
+      </div>
+      <div class="section-grid_item__content owl-em">
+        <h2>Xin Xin</h2>
+        <p>Lead Organizer</p>
+        <p><a href="https://xin-xin.info/">Xin Xin</a> is an interdisciplinary
+          artist and educator working at the intersection of technology, labor,
+          and identity. Xin co-founded voidLab, a LA-based intersectional
+          feminist collective dedicated to women, trans, and queer folks. They
+          initiated the School of Otherness which seeks to empower marginalized
+          communities through storytelling, forums, and workshops that process
+          experiences of the other. Their work has been exhibited at Ars
+          Electronica, the Hammer Museum, Gene Siskel Film Center, Tiger Strikes
+          Asteroid and Machine Project. Xin received their M.F.A from UCLA
+          Design Media Arts and teaches at the University of Georgia as the
+          Assistant Professor of Media Design and Women’s Studies.</p>
+      </div>
+    </section>
+    <section class="section-grid_item a-underline ">
+      <div class="section-grid_item__image">
+        <figure><img
+            src="https://processingfoundation.org/thumbs/kitchen-sink/chandler-500x680-q85.jpg"
+            alt="chandler-500x680-q85"
+            srcset="https://processingfoundation.org/thumbs/kitchen-sink/chandler-500x680-q85.jpg 1x, https://processingfoundation.org/thumbs/kitchen-sink/chandler-500x680-q85.jpg 2x, https://processingfoundation.org/thumbs/kitchen-sink/chandler-500x680-q85.jpg 3x"
+            height="680">
+          <figcaption>Chandler McWilliams in Los Angeles</figcaption>
+        </figure>
+      </div>
+      <div class="section-grid_item__content owl-em">
+        <h2>Chandler McWilliams</h2>
+        <p>Track Coordinator for Epic Play!</p>
+        <p><a href="http://chandlermcwilliams.com/">Chandler McWilliams</a> is
+          an artist, writer, and teacher living in Los Angeles. He has exhibited
+          internationally in non-profit and commercial galleries and art
+          institutions. McWilliams has a MA in Philosophy from The New School
+          For Social Research in New York City and an MFA from the Program in
+          Art at the California Institute of the Arts. He has published in
+          academic journals and conferences and is the co-author of <em>Form +
+            Code in Design, Art, and Architecture</em> (Princeton Architectural
+          Press, 2010). He is currently the Director of the UCLA Arts
+          Conditional Studio.</p>
+      </div>
+    </section>
+    <section class="section-banner">
+      <div class="banner-slideshow" data-simple-slideshow>
+      </div>
+      <div class="banner-background" style="background-color:rgba(0, 0, 0, 0)">
+      </div>
+      <div class="banner-text a-underline" style="color:white">
+        <div>
+          <div
+            style="position: relative; display: block; background-color: #EBEBEB; border-style: none; width: 100%; height: 500px;">
+            <iframe src="index.html" frameBorder="0"
+              style="position: absolute; display: block; border-style: none; width: 100%; height: 500px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer serif" aria-label="Footer">
+    <div class="a-blue">
+      <a
+        href="https://processingfoundation.myflodesk.com/newslettersubscription">
+        Subscribe to our mailing list </a>
+    </div>
+
+    <div class="a-blue">
+      <p>Contact us at <a
+          href="mailto:&#x66;&#111;&#x75;&#110;&#100;&#x61;&#116;&#105;&#111;&#x6e;&#x40;&#112;&#x72;&#111;&#x63;&#x65;&#115;&#x73;&#x69;&#x6e;&#103;&#x66;&#111;&#x75;&#x6e;&#x64;&#x61;&#x74;&#105;&#111;&#x6e;&#46;&#x6f;&#114;&#103;">&#102;&#x6f;&#x75;&#110;&#100;&#x61;&#116;&#105;&#x6f;&#x6e;&#64;&#112;&#x72;&#111;&#x63;&#101;&#x73;&#x73;&#x69;&#110;&#x67;&#x66;&#x6f;&#x75;&#110;&#100;&#97;&#x74;&#x69;&#x6f;&#x6e;&#46;&#111;&#x72;&#x67;</a>
+      </p>
+    </div>
+  </footer>
+  <footer class="secondary-footer serif" aria-label="Processing Links">
+    <nav class="sub-navigation a-grey" role="navigation"
+      aria-label="Sub Navigation">
+      <ul>
+        <li><a href="https://processing.org/" title="Processing">Processing</a>
+        </li>
+        <li><a href="https://p5js.org/" title="p5.js">p5.js</a></li>
+        <li><a href="https://py.processing.org/"
+            title="Processing.py">Processing.py</a></li>
+        <li><a href="https://android.processing.org/"
+            title="Processing for Android">Processing for Android</a></li>
+        <li><a href="https://pi.processing.org/"
+            title="Processing for Pi">Processing for Pi</a></li>
+      </ul>
+    </nav>
+
+    <div class="secondary-footer__right a-grey">
+      <a href="https://processingfoundation.org" title="Home">Processing
+        Foundation</a>
+      <a
+        href="https://processingfoundation.myflodesk.com/newslettersubscription">Mailing
+        List</a>
+      <form class="site-search" name="search" action="//www.google.com/search"
+        method="get" aria-label="Site Search">
+        <input type="hidden" aria-hidden="true" name="as_sitesearch"
+          value="https://processingfoundation.org">
+        <label for="as_q">Search</label>
+        <input type="text" id="as_q" name="as_q" value="" size="20" class="text"
+          placeholder="Enter search term" required="true">
+        <input type="submit" value="Search" aria-label="Search"
+          class="visually-hidden" />
+      </form>
+    </div>
+  </footer>
+  <script
+    src="https://polyfill.io/v3/polyfill.min.js?features=ResizeObserver%2CgetComputedStyle"></script>
+  <script
+    src="https://processingfoundation.org/assets/bundle.js?v=1593556638"></script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-35555329-20', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+
+</html>
