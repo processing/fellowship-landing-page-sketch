@@ -92,7 +92,7 @@ function draw() {
 }
 
 function drawGrid() {
-  const baseSize = height * 0.9;
+  const baseSize = height * 1.15;
 
   for (let i = 0; i < radialCells; i++) {
     let theta = map(i, 0, radialCells, 0, TWO_PI) + PI;
