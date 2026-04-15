@@ -126,8 +126,8 @@ function drawGrid() {
         0.0,
         1.0
       );
-
-      let r = map(myT, 0, 1, finalR * 15, finalR);
+      
+      let r = lerp(finalR * 1.4, finalR, myT);
 
       fill(grid[i][j].col);
       noStroke();
