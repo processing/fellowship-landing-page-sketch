@@ -26,7 +26,7 @@ let cnv;
 function setup() {
   const container = document.getElementById("sketch-container");
   const w = container.offsetWidth || windowWidth;
-  const h = container.offsetHeight || 400;
+  const h = container.offsetHeight || windowHeight;
 
   cnv = createCanvas(w, h);
   cnv.parent("sketch-container");
@@ -92,24 +92,25 @@ function draw() {
 }
 
 function drawGrid() {
-  const baseSize = height * 1.15;
+  // Use the smaller dimension so the whole sketch always fits
+  const size = min(width, height) * 0.88;
 
   for (let i = 0; i < radialCells; i++) {
     let theta = map(i, 0, radialCells, 0, TWO_PI) + PI;
-    let x1 = cos(theta) * baseSize * minRadProp;
-    let y1 = sin(theta) * baseSize * minRadProp;
-    let x2 = cos(theta) * baseSize * maxRadProp;
-    let y2 = sin(theta) * baseSize * maxRadProp;
+    let x1 = cos(theta) * size * minRadProp;
+    let y1 = sin(theta) * size * minRadProp;
+    let x2 = cos(theta) * size * maxRadProp;
+    let y2 = sin(theta) * size * maxRadProp;
 
     line(x1, y1, x2, y2);
   }
 
   for (let i = 0; i < layers + 1; i++) {
     let d = map(i, 0, layers, minRadProp, maxRadProp) * 2;
-    circle(0, 0, d * baseSize);
+    circle(0, 0, d * size);
   }
 
-  let halfLayerHeight = ((maxRadProp - minRadProp) / layers) * baseSize * 0.5;
+  let halfLayerHeight = ((maxRadProp - minRadProp) / layers) * size * 0.5;
   let halfCellAngle = (TWO_PI / radialCells) * 0.5;
 
   for (let i = 0; i < layers; i++) {
@@ -118,7 +119,7 @@ function drawGrid() {
 
       let theta = map(j, 0, radialCells, 0, TWO_PI) + halfCellAngle;
       let finalR =
-        map(i, 0, layers, minRadProp, maxRadProp) * baseSize + halfLayerHeight;
+        map(i, 0, layers, minRadProp, maxRadProp) * size + halfLayerHeight;
 
       let myT = constrain(
         1.0 - (grid[i][j].arrival - t) / grid[i][j].dT,
@@ -130,16 +131,16 @@ function drawGrid() {
 
       fill(grid[i][j].col);
       noStroke();
-      drawCell(theta, r, baseSize);
+      drawCell(theta, r, size);
       stroke(background_lightmode);
       noFill();
     }
   }
 }
 
-function drawCell(theta, r, baseSize) {
+function drawCell(theta, r, size) {
   let halfAngle = (TWO_PI / radialCells) * 0.5;
-  let halfR = ((maxRadProp - minRadProp) / layers) * baseSize * 0.5;
+  let halfR = ((maxRadProp - minRadProp) / layers) * size * 0.5;
 
   beginShape();
   vertex(
@@ -168,7 +169,7 @@ function drawCell(theta, r, baseSize) {
 function windowResized() {
   const container = document.getElementById("sketch-container");
   const w = container.offsetWidth || windowWidth;
-  const h = container.offsetHeight || 400;
+  const h = container.offsetHeight || windowHeight;
   resizeCanvas(w, h);
   initGrid();
 }
